@@ -1,0 +1,100 @@
+\documentclass[a4paper,10pt]{article}
+
+%pacchetti lingua, caratteri e SI
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[output-decimal-marker={.}]{siunitx}
+
+%pacchetti grafica e formattazione
+\usepackage{float}
+\usepackage{caption}
+\captionsetup{tableposition=top,figureposition=top,font=small}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{physics}
+\usepackage{microtype}
+\usepackage{multicol}%multicolonna    https://ctan.mirror.garr.it/mirrors/ctan/macros/latex/required/tools/multicol.pdf
+\usepackage{geometry}
+\usepackage{changepage}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{cancel}
+\usepackage{bbm}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage{circuitikz}
+\usepackage{gensymb}
+\usepackage{textcomp}
+
+\usepackage{lipsum}
+
+%riformattazione pagina
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2cm, right=2cm}
+
+%ridefinizione comando maketitle 
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+    \textbf{\@title}
+
+    \vspace{10pt}
+    \@author
+\end{flushleft}\egroup
+}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%INTESTAZIONE%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+\lhead{Insegnamento\\ \vspace{6pt} \\Modulo Materia - Prof. Mario Rossi}
+\rhead{A.A. 2021/2022\\\vspace{3pt} \hline \vspace{3pt}\\Università degli Studi di Torino}
+\cfoot{Esperienza \\Università degli Studi di Torino, corso di laurea in Fisica}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%TITOLO%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{\vspace*{5pt}\Huge{\textbf{Esperienza x: titolo}}}
+\author{\textbf{Editor}$^1$, Collega 1, Collega 2\\
+	\vspace*{5pt}\small{$^{1}$ \url{nome.cognome@edu.unito.it}}}
+\date{}
+
+\graphicspath{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%CORPO DEL TESTO%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+
+\section*{Obiettivi di misura}
+\begin{adjustwidth}{}{2.5cm} %aggiustamento larghezza paragrafo
+\lipsum[1]
+
+\end{adjustwidth}
+\noindent\hrulefill
+
+\begin{multicols}{2}
+
+\section{Apparato sperimentale}
+\lipsum[1]
+
+\section{Presa dati}
+\lipsum[1]
+
+\section{Elaborazione dati}
+\lipsum[1]
+
+\section{Risultati e conclusioni}
+\lipsum[1]
+
+\section{Appendice}
+\lipsum[1]
+
+
+\begin{thebibliography}{9}
+\bibitem{}{}
+
+\end{thebibliography}
+
+\end{multicols}
+\end{document}
